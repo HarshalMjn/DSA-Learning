@@ -11,7 +11,8 @@ int main () {
     while(row<=n){
         col=1;
         while(col<=0){
-            cout<<'A'+row-1;
+            char cha= 'A'+row-1;
+            cout<<cha<<'';
             col++;
         }
         cout<<endl;

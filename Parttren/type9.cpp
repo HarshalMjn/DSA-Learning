@@ -14,7 +14,7 @@ int main() {
     while(i<=n) {
         int j = 1, val=i;
         while(j<=n){
-            cout<<val<<' ';
+            cout<<val<<'';
             j++;
         }
         cout<<endl;
