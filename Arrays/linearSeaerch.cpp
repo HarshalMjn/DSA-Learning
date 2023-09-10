@@ -1,36 +1,35 @@
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
-bool search(int arr[], int size, int key) {
-
-    for( int i = 0; i<size; i++ ) {
-
+bool serach(int arr[], int size,int key) {
+    for(int i = 0 ; i<size; i++) {
         if( arr[i] == key) {
-            return 1;
+            return 1; //find return on the spot
         }
-
     }
-    return 0;
+    return 0; //not find after the arry traverse
 }
 
-
-int main() {
-
-    int arr[10] = { 5, 7, -2, 10, 22, -2, 0, 5, 22, 1};
-
-    cout <<" Enter the element to search for " << endl; 
+int main()
+{
+    int arr[10] = {5,7,-2,10,22,-2,5,22,1};
+    
+    //whether is present in it or not ?
+    cout<<"Enter the element to serach for"<<endl;
+    
     int key;
-    cin >> key;
-
-    bool found = search(arr, 10, key);
-
-    if( found ) {
-        cout <<" Key is present "<< endl;
+    cin>>key;
+    
+    bool found  = serach(arr,10,key);  //function give bool value so store in bool variable
+    
+    if( found) {
+        cout<<"key is  present"<<endl;
+        
     }
-    else{
-        cout <<" Key is absent " << endl;
+    else {
+        cout<<"key is absent"<<endl;
     }
-
-
+    
     return 0;
 }
