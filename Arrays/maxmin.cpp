@@ -1,53 +1,53 @@
 #include <iostream>
-
+#include <limits.h>
 using namespace std;
 
+int getMax(int num[],int n) {
+    
+    int max =INT_MIN;
+    
+    for(int i = 0; i<n ; i++) {
+        if(num[i] > max) {
+            max = num[i];
+        }
+    }
+    
+   // return max value
+   return max;
+    
+}
 
 int getMin(int num[],int n) {
-    int min = INT_FAST32_MIN;
     
-    for(int i = 0; i<n; i++){
-        if(num[i] > min ){
-            min = min[i];
+    int min =INT_MAX;
+    
+    for(int i = 0; i<n ; i++) {
+        if(num[i] < min) {
+            min = num[i];
         }
     }
     
-    //return max value
-    return min;
-} 
-
-
-int getMax(int num[],int n) {
-    int max = INT_FAST32_MAX;
+   // return max value
+   return min;
     
-    for(int i = 0; i<n; i++){
-        if(num[i] > max ){
-            max = max[i];
-        }
-    }
-    
-    //return max value
-    return max;
-} 
+}
 
 int main()
 {
     int size;
     cin>>size;
-    //size of array -> variable (bad pratice)
-    //good pratice [22],[100] good as compair to  variable
     
-    int num[100];
+    //int num[size]; bad pratice
     
-    //taking input of array
-    for(int i=0;i<size;i++) {
-       // input of array
+    int num[100]; //Good pratice
+    
+    //taking input in array
+    for(int i = 0;i<size;i++) {
         cin>>num[i];
     }
-    cout<<"Max value is"<<getMax(num,size)<<endl;
-    cout<<"Min value is"<<getMin(num,size)<<endl;
     
-    
+    cout<<"Maximum value is"<<getMax(num,size)<<endl;
+    cout<<"Minimun value is"<<getMin(num,size)<<endl;
 
     return 0;
 }

@@ -1,4 +1,4 @@
-// Online C++ compiler to run C++ program online
+
 #include <iostream>
 using namespace std;
 
@@ -56,7 +56,7 @@ int main() {
    // }
    // cout<<endl;
     
-         //initialize all location with 1 not possible
+     //initialize all location with 1 not possible
     int fifth[10] = {1};
     printArray(fifth,15);
     int fifthSize = sizeof(fifth)/sizeof(int);
@@ -70,12 +70,14 @@ int main() {
    // cout<<endl;
 
 
-     char ch[5] = {'a','b','c','r','p'};
+    char ch[5] = {'a','b','c','r','p'};
    //cout<<ch[3];
    int q=5;
    for(int i=0;i<q;i++){
        cout<<ch[i]<<endl;
    }
+
+   
    
     
     
